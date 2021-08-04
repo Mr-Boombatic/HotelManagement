@@ -1,0 +1,72 @@
+﻿<Window x:Class="LabsDB.AddVisit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabsDB"
+        mc:Ignorable="d"
+        Title="Добавление клинета" ResizeMode="NoResize" Height="330" Width="340">
+    <Grid RenderTransformOrigin="0.497,0.51">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.7*"></RowDefinition>
+            <RowDefinition Height="0.9*"></RowDefinition>
+            <RowDefinition Height="0.6*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Личные данные клиента" Foreground="#FFB8A215" FontSize="16" Margin="72,3"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Имя" VerticalAlignment="Center" HorizontalAlignment="Right" Margin ="0,6,4,6"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Фамилия" VerticalAlignment="Center" HorizontalAlignment="Right" Margin ="0,6,5,5"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Отчество" VerticalAlignment="Center" HorizontalAlignment="Right" Margin ="0,6,5,5"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Адрес проживания" VerticalAlignment="Center" HorizontalAlignment="Right" Margin ="0,6,5,5"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Паспортные данные" VerticalAlignment="Center" HorizontalAlignment="Right" Margin ="0,6,4,5"/>
+            <TextBox HorizontalAlignment="Left" Height="19" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Margin="10,0,0,0" Grid.Column="1" Grid.ColumnSpan="2" Name="name"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="10,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Grid.ColumnSpan="2" Name="surname"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="10,0,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Grid.ColumnSpan="2" Name="pasportData"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="10,0,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Grid.ColumnSpan="2" Name="patronymic"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,1,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Name="address"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top"  HorizontalAlignment="Center" Text="Дата приезда и отьезда" Foreground="#FFB8A215" FontSize="16" Height="21" Width="174"/>
+            <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="16" Width="74" Margin ="0,0,5,0">Дата приезда</TextBlock>
+            <TextBlock Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Height="16" Width="74" Margin ="0,0,5,0">Дата отьезда</TextBlock>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="10,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Name="ArrivalDate"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="10,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Name="DepartureDate"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.7*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top"  HorizontalAlignment="Center" Text="Снимаемая комната" Foreground="#FFB8A215" FontSize="16" Height="21" Width="174"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" AutomationProperties.Name="numberRoom"/>
+            <TextBlock HorizontalAlignment="Left" Margin="62,9,0,-3" Grid.Row="1" TextWrapping="Wrap" Text="Номер комнтаы" VerticalAlignment="Top" Width="90"/>
+        </Grid>
+        <Button Content="Добвить" HorizontalAlignment="Left" Margin="247,5,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    </Grid>
+</Window>
